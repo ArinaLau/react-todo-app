@@ -20,15 +20,8 @@ export const ACTIONS = {
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
 //Initalising state of the component
-// function setInitialState(){
-//   const initialState = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-//   if(initialState) newTodo(initialState)
-// }
 const initialState = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
 
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
 function newTodo(name){
   return {id: Date.now(), name: name, complete:false, isInEditMode: false}
 }
@@ -90,22 +83,15 @@ function App() {
 		localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
 	}, [todos]);
   
+  // let isAlertActive = false
   function handleSubmit(e){
     e.preventDefault()
-    if(name === "") {
-      alert('Empty todo')
+    if(name === '') {
       return
     }
     dispatch({type: ACTIONS.ADD_TODO, payload: {name: name}})
     setName('')
   }
-  
-  // let todosToRender
-  // if(todos){
-  //   todosToRender = todos.map(todo => {
-  //     return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
-  //   });
-  // }
 
   return (
     <div className="todo-app-container">
@@ -118,7 +104,16 @@ function App() {
     
                 <button className="btn btn-add" onClick={handleSubmit}>Add</button>
             </div>
+            
           </div>
+          {/* <div role="alert" className={`alert-section${isAlertActive ? '' : ' active'}`}>
+                <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                  Danger
+                </div>
+                <div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+                  <p>Something not ideal might be happening.</p>
+                </div>
+            </div> */}
             
           <div>{todos.map(todo => {
             return <Todo key={todo.id} todo={todo} dispatch={dispatch} />

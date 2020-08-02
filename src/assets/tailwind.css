@@ -66,14 +66,7 @@ body{
 
 .todo-toggle{
     @apply mr-2;
-    /* @apply form-checkbox; */  
 }
-
-/* .todo-toggle:checked{
-    @apply text-green-600;
-} */
-
-
 
 .todo.done{
    @apply line-through;
@@ -98,19 +91,28 @@ body{
     @apply bg-teal-400;
 }
 
-.navbar-section{
+.alert-section{
+    @apply mb-4;
+    @apply hidden;
+}
+
+.alert-section.active{
+    @apply block;
+}
+
+/*.navbar-section{
     @apply flex;
     @apply border-b;
     @apply mt-4;
     @apply mb-4;
 }
 
-/* .navbar-list-1{
+ .navbar-list-1{
     @apply -mb-px;
 }
 .navbar-list{
     @apply mr-1;
-} */
+} 
 
 .navbar-link{
     @apply bg-white;
@@ -132,24 +134,7 @@ body{
     @apply rounded-t; 
     @apply text-blue-700;
 }
-
-/* .btn-done{
-    @apply ml-4;     
-    @apply mr-2;
-    @apply text-green-400;
-    @apply border-green-400;
-    @apply hover:text-white;
-    @apply hover:bg-green-400;
-}
-
-.btn-undone{
-    @apply ml-4;     
-    @apply mr-2;
-    @apply text-gray-400;
-    @apply border-gray-400;
-    @apply hover:text-white;
-    @apply hover:bg-grey-400;
-} */
+*/
 
 .btn-edit{
     @apply ml-4;     
@@ -174,6 +159,5 @@ body{
     @apply bg-red-400;
 
 }
-
 
 @import "tailwindcss/utilities";

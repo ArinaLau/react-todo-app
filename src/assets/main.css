@@ -686,12 +686,7 @@ body{
 
 .todo-toggle{
   margin-right: 0.5rem;
-  /* @apply form-checkbox; */
 }
-
-/* .todo-toggle:checked{
-    @apply text-green-600;
-} */
 
 .todo.done{
   text-decoration: line-through;
@@ -725,69 +720,50 @@ body{
   background-color: rgba(79, 209, 197, var(--bg-opacity));
 }
 
-.navbar-section{
-  display: flex;
-  border-bottom-width: 1px;
-  margin-top: 1rem;
+.alert-section{
   margin-bottom: 1rem;
+  display: none;
 }
 
-/* .navbar-list-1{
+.alert-section.active{
+  display: block;
+}
+
+/*.navbar-section{
+    @apply flex;
+    @apply border-b;
+    @apply mt-4;
+    @apply mb-4;
+}
+
+ .navbar-list-1{
     @apply -mb-px;
 }
 .navbar-list{
     @apply mr-1;
-} */
+} 
 
 .navbar-link{
-  --bg-opacity: 1;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
-  display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  --text-opacity: 1;
-  color: #4299e1;
-  color: rgba(66, 153, 225, var(--text-opacity));
-  font-weight: 600
+    @apply bg-white;
+    @apply inline-block;
+    @apply py-2;
+    @apply px-4;
+    @apply text-blue-500;
+    @apply font-semibold
 }
 
 .navbar-link:hover{
-  --text-opacity: 1;
-  color: #2c5282;
-  color: rgba(44, 82, 130, var(--text-opacity))
+    @apply text-blue-800 
 }
 
 .navbar-link.active{
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  --text-opacity: 1;
-  color: #2b6cb0;
-  color: rgba(43, 108, 176, var(--text-opacity));
+    @apply border-l;
+    @apply border-t;
+    @apply border-r;
+    @apply rounded-t; 
+    @apply text-blue-700;
 }
-
-/* .btn-done{
-    @apply ml-4;     
-    @apply mr-2;
-    @apply text-green-400;
-    @apply border-green-400;
-    @apply hover:text-white;
-    @apply hover:bg-green-400;
-}
-
-.btn-undone{
-    @apply ml-4;     
-    @apply mr-2;
-    @apply text-gray-400;
-    @apply border-gray-400;
-    @apply hover:text-white;
-    @apply hover:bg-grey-400;
-} */
+*/
 
 .btn-edit{
   margin-left: 1rem;
